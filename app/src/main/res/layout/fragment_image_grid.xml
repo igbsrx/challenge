@@ -1,0 +1,74 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:baseApplication="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_light"
+    android:padding="@dimen/default_padding"
+    tools:context="view.grid.ImageGridFragment">
+
+
+    <EditText
+        android:id="@+id/fragment_grid_input_searh"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/fragment_grid_input_searh_hint"
+        android:textColor="@color/primary_dark"
+        android:textColorHint="@color/primary_dark"
+        baseApplication:layout_constraintEnd_toStartOf="@+id/fragment_grid_search_btn"
+        baseApplication:layout_constraintStart_toStartOf="parent"
+        baseApplication:layout_constraintTop_toTopOf="parent">
+
+        <requestFocus />
+
+    </EditText>
+
+    <Button
+        android:id="@+id/fragment_grid_search_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_grid_search_button"
+        baseApplication:layout_constraintEnd_toEndOf="parent"
+        baseApplication:layout_constraintTop_toTopOf="parent" />
+
+
+    <GridView
+        android:id="@+id/fragment_grid_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:horizontalSpacing="5dp"
+        android:numColumns="3"
+        android:verticalSpacing="5dp"
+        baseApplication:layout_constraintBottom_toBottomOf="parent"
+        baseApplication:layout_constraintEnd_toEndOf="parent"
+        baseApplication:layout_constraintStart_toStartOf="parent"
+        baseApplication:layout_constraintTop_toBottomOf="@+id/fragment_grid_input_searh" />
+
+    <ProgressBar
+        android:id="@+id/fragment_grid_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        baseApplication:layout_constraintBottom_toBottomOf="@+id/fragment_grid_view"
+        baseApplication:layout_constraintEnd_toEndOf="parent"
+        baseApplication:layout_constraintStart_toStartOf="@+id/fragment_grid_view"
+        baseApplication:layout_constraintTop_toTopOf="@+id/fragment_grid_view" />
+
+    <TextView
+        android:id="@+id/fragment_grid_error"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Oops Something went really wrong"
+        android:textColor="@color/primary_dark"
+        android:textSize="20sp"
+        android:visibility="gone"
+        baseApplication:layout_constraintBottom_toBottomOf="@+id/fragment_grid_view"
+        baseApplication:layout_constraintEnd_toEndOf="parent"
+        baseApplication:layout_constraintStart_toStartOf="@+id/fragment_grid_view"
+        baseApplication:layout_constraintTop_toTopOf="@+id/fragment_grid_view" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
