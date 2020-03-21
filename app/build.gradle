@@ -1,8 +1,15 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
-apply plugin: 'maven'
 
 android {
+    signingConfigs {
+        release {
+            storeFile file('/Users/irvingonzalez/Documents/challenge-release-key')
+            storePassword 'storesecret22'
+            keyAlias = 'challenge-key'
+            keyPassword 'keysecret22'
+        }
+    }
     compileSdkVersion 28
     defaultConfig {
         applicationId "jp.styler.challenge"
@@ -24,8 +31,21 @@ android {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
+
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/Propertyfinder/android-consumer-app")
+            credentials {
+                username = System.getenv("GITHUB_USER_NAME")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
