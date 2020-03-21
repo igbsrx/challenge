@@ -41,7 +41,7 @@ android {
             url = uri("https://maven.pkg.github.com/Propertyfinder/android-consumer-app")
             credentials {
                 username = "soulrainx"
-                password = "8d41a69bc3e5cc151081958d883d229704f94bcd"
+                password = "64d48b54878ccf4679436649175bb18f6b682fb8"
             }
         }
     }
