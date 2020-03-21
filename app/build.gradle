@@ -40,8 +40,8 @@ android {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/Propertyfinder/android-consumer-app")
             credentials {
-                username = "soulrainx"
-                password = "64d48b54878ccf4679436649175bb18f6b682fb8"
+                username = System.getenv("GITHUB_USERNAME")
+                password = System.getenv("GITHUB_TOKEN")
             }
         }
     }
