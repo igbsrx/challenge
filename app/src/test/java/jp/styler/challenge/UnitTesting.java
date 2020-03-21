@@ -46,10 +46,7 @@ public class UnitTesting {
 
         // "{ \"id\": \"49532265273\", \"owner\": \"186686453@N05\", \"secret\": \"d04e9c7c6c\", \"server\": \"65535\", \"farm\": 66, \"title\": \"SULTHON KEBAB | Call\\/WA : 0852 8034 2504 | Produsen Tortilla Kabupaten Malinau\", \"ispublic\": 1, \"isfriend\": 0, \"isfamily\": 0 },";
 
-//        String constructedUrl = String.format(Constants.IMAGE_CONSTRUCT_THUMB, "66", "65535", "49532265273", "d04e9c7c6c");
-
-        String constructedUrl = String.format(Constants.IMAGE_CONSTRUCT_THUMB, "66", "655d35", "49532265273", "d04e9c7c6c");
-
+        String constructedUrl = String.format(Constants.IMAGE_CONSTRUCT_THUMB, "66", "65535", "49532265273", "d04e9c7c6c");
 
         assertEquals(constructedUrl, url);
 
