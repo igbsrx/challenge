@@ -20,6 +20,14 @@ allprojects {
         google()
         jcenter()
         maven { url "https://jitpack.io" }
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/Propertyfinder/android-consumer-app")
+            credentials {
+                username = System.getenv("GITHUB_USER_NAME") ?: "soulrainx"
+                password = System.getenv("GITHUB_TOKEN") ?: "c86135451d0df84dac90fae0a80c6eabe5120bc0"
+            }
+        }
     }
 }
 

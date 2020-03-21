@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import ae.propertyfinder.analytics.dispatcher.FirebaseConsumerDispatcher;
 import data.endpoint.Service;
 import io.reactivex.Single;
 import jp.styler.challenge.BuildConfig;
@@ -20,6 +21,8 @@ public class PhotosRepository {
     }
 
     public Single<List<Photo>> getPhotos(String typedText) {
+
+        FirebaseConsumerDispatcher d;
 
         return service.searchPhotos(
                 "flickr.photos.search",
