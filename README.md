@@ -1,3 +1,6 @@
+[![Build Status](https://app.bitrise.io/app/fa44db4989fb2bf3/status.svg?token=rdaJ4tBfnlzbKK0aYAIpuQ&branch=master)](https://app.bitrise.io/app/fa44db4989fb2bf3)
+
+
 # photo-searcher-android-irvin
 Code Challenge Android
 
